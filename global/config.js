@@ -1,3 +1,3 @@
 /*eslint-disable*/
-const API_URL = "http://localhost:3001/";   //https://tooth-backend.onrender.com/
+const API_URL = "https://tooth-backend.onrender.com/"; //http://localhost:3001/
 export default API_URL;
