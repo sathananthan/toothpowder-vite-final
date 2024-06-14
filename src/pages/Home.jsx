@@ -34,14 +34,14 @@ function Home() {
       };
 
       const response = await axios.get(`${API_URL}home/`, config);
-      console.log("response from axois: ", response);
+      // console.log("response from axois: ", response);
 
       if (response.data === "Invalid Token") {
         alert("login again");
       } else if (response.data === "Server Busy") {
         alert("Unautherized user");
       } else if (response?.status) {
-        console.log("response data : ", response?.data);
+        // console.log("response data : ", response?.data);
         /* const data = {
           
         }; */
@@ -59,7 +59,7 @@ function Home() {
           },
         });
 
-        console.log("User from reducer : ", user); //it show before updation see react article if any doubt
+        // console.log("User from reducer : ", user); //it show before updation see react article if any doubt
       }
     } catch (err) {
       console.log(err);
