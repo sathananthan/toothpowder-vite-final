@@ -1,0 +1,16 @@
+.success {
+  text-align: center;
+}
+
+.success .btn {
+  background-color: #448f1e;
+  border: 1px solid;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.success .btn:hover {
+  background-color: #538a38;
+}

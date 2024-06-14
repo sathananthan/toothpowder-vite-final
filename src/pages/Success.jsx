@@ -1,0 +1,20 @@
+/*eslint-disable*/
+import React from "react";
+import SuccessGif from "../assets/success.gif";
+import "../style/Success.css";
+import { useNavigate } from "react-router-dom";
+
+function Success() {
+  const navigate = useNavigate();
+  return (
+    <div className="success">
+      <img src={SuccessGif} alt="order success img" />
+      <h2>Ordered Successfully</h2>
+      <button className="btn" onClick={(e) => navigate("/")}>
+        Home
+      </button>
+    </div>
+  );
+}
+
+export default Success;

@@ -1,0 +1,77 @@
+.CartProduct {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.CartProduct:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.CartProduct .info {
+  padding-left: 20px;
+}
+
+.CartProduct .info button {
+  background-color: black;
+  border: 1px solid;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.CartProduct .info button:hover {
+  background-color: rgba(39, 36, 36, 0.9);
+}
+
+.CartProduct .img {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CartProduct .img .prod_img {
+  object-fit: contain;
+}
+
+.CartProduct .prod_tit {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.CartProduct .info .qty-select {
+  width: 20vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  .CartProduct {
+    display: flex;
+    justify-content: center; /* Aligns items horizontally (along the main axis) */
+    align-items: center; /* Aligns items vertically (along the cross axis) */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .CartProduct {
+    display: grid;
+    justify-content: center; /* Aligns items horizontally (along the main axis) */
+    align-items: center; /* Aligns items vertically (along the cross axis) */
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .CartProduct .img .prod_img {
+    width: 200px;
+    height: 150px;
+  }
+  .CartProduct .img {
+    width: 200px;
+    height: 150px;
+  }
+}

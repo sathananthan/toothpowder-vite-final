@@ -1,0 +1,18 @@
+.Productpg {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Productpg .productTitle {
+  font-family: serif;
+  font-size: 60px;
+}
+
+.prodred {
+  color: #ff040f;
+  border-bottom: 2px solid #ff040f;
+}
