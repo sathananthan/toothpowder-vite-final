@@ -67,3 +67,15 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+@media only screen and (max-width: 600px) {
+  .pay_btn .btn {
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .pay_btn .btn {
+    margin-left: 10px;
+  }
+}
