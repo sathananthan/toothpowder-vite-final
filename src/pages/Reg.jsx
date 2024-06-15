@@ -18,21 +18,24 @@ function Reg() {
   // console.log("data : ", data);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (data.phno.length == 10) {
+      try {
+        const response = await axios.post(`${API_URL}signup/verify`, data);
+        console.log(response);
 
-    try {
-      const response = await axios.post(`${API_URL}signup/verify`, data);
-      console.log(response);
-
-      if (response.data === false) {
-        alert("Email already exist");
-      } else if (response.data === true) {
-        alert("Check email for verification");
+        if (response.data === false) {
+          alert("Email already exist");
+        } else if (response.data === true) {
+          alert("Check email for verification 'Confirmation link send'");
+        }
+      } catch (err) {
+        console.log(err);
+        if (err.message) {
+          alert("Network error");
+        }
       }
-    } catch (err) {
-      console.log(err);
-      if (err.message) {
-        alert("Network error");
-      }
+    } else {
+      alert("Phno must be length 10");
     }
   };
   return (
