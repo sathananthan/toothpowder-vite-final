@@ -1,35 +1,48 @@
 .productdetails {
-  /* display: flex; */
-  flex-direction: row;
   display: flex;
-  /* top: 0; */
-  /* z-index: 100; */
+  flex-wrap: wrap;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  gap: 10px; /* Adds space between the items */
+  padding: 50px 0px;
 }
 
-.prodimg {
-  border-radius: 15px;
-  margin-left: 300px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-}
-
+.leftside,
 .rightside {
-  flex: 50%;
-  height: 100%;
+  flex: 1 1 300px; /* Allows the items to grow and shrink */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 150px;
-  margin-right: 110px;
-  margin-left: 0px;
+  text-align: center;
 }
 
 .leftside {
-  flex: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  order: 1; /* Default order for leftside */
+}
+
+.rightside {
+  order: 2; /* Default order for rightside */
+}
+
+.prodimg {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .productdetails {
+    flex-direction: column; /* Stacks items vertically on small screens */
+  }
+
+  .leftside,
+  .rightside {
+    order: unset; /* Resets order to natural flow for stacking */
+  }
 }
