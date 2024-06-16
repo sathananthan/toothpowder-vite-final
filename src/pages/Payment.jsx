@@ -102,7 +102,7 @@ function Payment() {
                   className="editbtn"
                   onClick={(e) => navigate("/userdetails")}
                 >
-                  Edit
+                  Edit Address
                 </button>
               </div>
             </div>
