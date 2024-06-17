@@ -19,6 +19,7 @@ function Productpg() {
         <h1 className="productTitle">
           Our <span className="prodred">Products</span>
         </h1>
+
         <Product />
         {/* <Footer/> */}
       </div>

@@ -1,10 +1,12 @@
 /* eslint-disable */
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
+import Toast1 from "./Toast";
 
-function ProductItem({ id, image, name, price, delivered }) {
+function ProductItem({ id, image, name, price, delivered, show, setShow }) {
   const [{ basket }, dispatch] = useStateValue();
+
   // const [cart, iscart] = useState(false);
   // const carted = cart? true : null;     do something
 
@@ -14,7 +16,7 @@ function ProductItem({ id, image, name, price, delivered }) {
 
   const addToCart = () => {
     //dispatch the item into the date layer
-
+    setShow(true); //to show toast
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
@@ -36,13 +38,14 @@ function ProductItem({ id, image, name, price, delivered }) {
   };
 
   return (
-    <div className="productItem">
-      <Link to={"/productdetails/" + id}>
-        <div style={{ backgroundImage: `url(${image})` }}></div>
-        <h1 className="productItemTitle">{name}</h1>
-        <p className="productItemPrice">₹{price}</p>
-      </Link>
-      {/* {cart ? (
+    <>
+      <div className="productItem">
+        <Link to={"/productdetails/" + id}>
+          <div style={{ backgroundImage: `url(${image})` }}></div>
+          <h1 className="productItemTitle">{name}</h1>
+          <p className="productItemPrice">₹{price}</p>
+        </Link>
+        {/* {cart ? (
         <button onClick={(e) => Navigate("/cart")}>Go to Cart</button>
       ) : (
         <button
@@ -54,16 +57,17 @@ function ProductItem({ id, image, name, price, delivered }) {
           Add to Cart
         </button>
       )} */}
-      {basket.some((bask) => bask.id === id) ? (
-        <button onClick={removeCart} className="productItemRmbtn">
-          Remove
-        </button>
-      ) : (
-        <button onClick={addToCart} className="productItemAddbtn">
-          Add to Cart
-        </button>
-      )}
-    </div>
+        {basket.some((bask) => bask.id === id) ? (
+          <button onClick={removeCart} className="productItemRmbtn">
+            Remove
+          </button>
+        ) : (
+          <button onClick={addToCart} className="productItemAddbtn">
+            Add to Cart
+          </button>
+        )}
+      </div>
+    </>
   );
 }
 
