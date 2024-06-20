@@ -16,3 +16,9 @@
   color: #ff040f;
   border-bottom: 2px solid #ff040f;
 }
+
+@media only screen and (max-width: 335px) {
+  .Productpg .productTitle {
+    font-size: 40px;
+  }
+}
