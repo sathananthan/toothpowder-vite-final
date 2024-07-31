@@ -74,7 +74,9 @@ export default function Navbar1() {
                 </Nav.Link>
               )}
               {!user?.name == "" ? (
-                <Nav.Link as={Link} to="/userdetails" className="usericon">
+                <Nav.Link as={Link} /* to="/" */ className="usericon">
+                  {" "}
+                  {/* /userdetails */}
                   <AccountCircleIcon />
                   <br />
                   <span className="user">{user?.name}</span>
