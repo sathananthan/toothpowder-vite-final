@@ -53,14 +53,14 @@ function User_details() {
               name="name"
               value={edit ? data.name : user.name}
               /*  style={!edit ? "{ outline: 'none'}": ""} */
-              onChange={(e) => {
+              /*  onChange={(e) => {
                 setData({
                   ...data,
                   name: e.target.value,
                 });
-              }}
+              }} */
               placeholder={user.name}
-              required
+              disabled
             />
 
             <label htmlFor="age">Age </label>
@@ -68,14 +68,14 @@ function User_details() {
               type="text"
               name="age"
               value={edit ? data.age : user.age}
-              onChange={(e) => {
+              /* onChange={(e) => {
                 setData({
                   ...data,
                   age: e.target.value,
                 });
-              }}
+              }} */
               placeholder={user.age}
-              required
+              disabled
             />
 
             <label htmlFor="email">Email :</label>
@@ -84,13 +84,13 @@ function User_details() {
               name="email"
               value={edit ? data.email : user.email}
               placeholder={user.email}
-              onChange={(e) => {
+              /* onChange={(e) => {
                 setData({
                   ...data,
                   email: e.target.value,
                 });
-              }}
-              required
+              }} */
+              disabled
             />
 
             <label htmlFor="pass">Password :</label>
@@ -108,19 +108,35 @@ function User_details() {
               required
             />
 
+            <button
+              style={{
+                backgroundColor: "rgb(221, 32, 32)",
+                border: "1px solid",
+                color: "rgb(255, 255, 255)",
+                borderRadius: "5px",
+                padding: "5px 10px",
+                cursor: "pointer",
+              }}
+              onClick={(e) => {
+                setEdit(true);
+              }}
+            >
+              Change Password
+            </button>
+            <br />
             <label htmlFor="phno">Mobile no :</label>
             <input
               type="text"
               name="phno"
               value={edit ? data.phno : user.phno}
-              onChange={(e) => {
+              /*  onChange={(e) => {
                 setData({
                   ...data,
                   phno: e.target.value,
                 });
-              }}
+              }} */
               placeholder={user.phno}
-              required
+              disabled
             />
 
             <label htmlFor="address">Address : </label>
@@ -154,7 +170,7 @@ function User_details() {
                   setEdit(true);
                 }}
               >
-                Edit
+                Edit Address
               </button>
             ) : (
               <button
@@ -185,7 +201,10 @@ function User_details() {
           <br />
         </div>
       </div>
-
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </>
   );

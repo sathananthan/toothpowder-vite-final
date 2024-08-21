@@ -74,7 +74,7 @@ function Home() {
         {/* <Navbar/> */}
         <div id="home1" style={{ backgroundImage: `url(${BannerImage})` }}>
           <div className="headerContainer">
-            <h1>NCS's Tooth Powder Mfr.</h1>
+            <h1>Arutperumjothi Suddha Siddha Private Limited</h1>
             <p>
               Every tooth in a man's head is more valuable than a diamond{" "}
               {/* {user.name} */}
