@@ -88,7 +88,7 @@ function Reg() {
             onChange={(e) => {
               setData({
                 ...data,
-                email: e.target.value,
+                email: e.target.value.toLowerCase(),
               });
             }}
             required
