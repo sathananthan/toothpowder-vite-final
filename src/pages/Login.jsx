@@ -9,12 +9,20 @@ import {
 } from "firebase/auth"; */
 import "../style/Login.css";
 import API_URL from "../../global/config";
+import PopupForgetPass from "./PopupForgetPass";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+
+  //for forgetpass popup
+  const [isPopupOpenPass, setisPopupOpenPass] = useState(false);
+
+  const togglePopupPass = () => {
+    setisPopupOpenPass(!isPopupOpenPass);
+  };
 
   const signIn = async (e) => {
     e.preventDefault();
@@ -80,16 +88,21 @@ function Login() {
             required
           />
 
+          <a className="forget" onClick={togglePopupPass}>
+            {" "}
+            {/* dont use form inside form */}
+            Forget Password
+          </a>
+
           <button type="submit" className="signin">
             Sign In
           </button>
         </form>
-
+        {isPopupOpenPass && <PopupForgetPass closePopup={togglePopupPass} />}{" "}
+        {/* dont use form inside form */}
         <p>
-          By continuing, you agree to Ncs's Conditions of Use and Privacy
-          Notice.
+          By continuing, you agree to AAT Conditions of Use and Privacy Notice.
         </p>
-
         <Link to="/reg" className="register">
           Create Account
         </Link>

@@ -64,7 +64,7 @@ function PopupChgpass({ closePopup }) {
       <div className="popup-overlay">
         <div className="popup-box">
           <h2>Change Password</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>Current Password : &nbsp;</label>
             <input
               type="password"
@@ -108,9 +108,7 @@ function PopupChgpass({ closePopup }) {
             <button onClick={closePopup} className="close">
               Close
             </button>
-            <button onClick={handleSubmit} className="submit">
-              Submit
-            </button>
+            <button className="submit">Submit</button>
           </form>
         </div>
       </div>

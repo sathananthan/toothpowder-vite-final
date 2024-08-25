@@ -65,3 +65,10 @@
 .register {
   text-align: center;
 }
+
+.forget {
+  display: grid;
+  justify-content: end;
+  font-size: 15px;
+  cursor: pointer;
+}
