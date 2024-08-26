@@ -10,6 +10,8 @@ function PopupForgetPass({ closePopup }) {
   const [otpSent, setOtpSent] = useState(false);
   const [message, setMessage] = useState("");
 
+  const [newRetypePassword, setRetypeNewPassword] = useState("");
+
   const sendOtp = async (e) => {
     e.preventDefault();
     try {
@@ -37,14 +39,21 @@ function PopupForgetPass({ closePopup }) {
 
   const changePassword = async () => {
     try {
-      const response = await axios.post(`${API_URL}password/change-password`, {
-        email,
-        otp,
-        newPassword,
-      });
-      const data = await response.data;
-      console.log("response : ", response);
-      setMessage(data);
+      if (newPassword == newRetypePassword) {
+        const response = await axios.post(
+          `${API_URL}password/change-password`,
+          {
+            email,
+            otp,
+            newPassword,
+          }
+        );
+        const data = await response.data;
+        console.log("response : ", response);
+        setMessage(data);
+      } else {
+        setMessage("New password and Retype password not same");
+      }
     } catch (error) {
       setMessage("Error changing password");
     }
@@ -90,9 +99,16 @@ function PopupForgetPass({ closePopup }) {
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
               required
+            />{" "}
+            &nbsp;&nbsp;&nbsp;
+            <input
+              type="password"
+              placeholder="Retype new password"
+              value={newRetypePassword}
+              onChange={(e) => setRetypeNewPassword(e.target.value)}
+              required
             />
             <br />
-
             <button onClick={changePassword} className="submit">
               Change Password
             </button>
