@@ -8,7 +8,9 @@ function Success() {
   const navigate = useNavigate();
   return (
     <div className="success">
-      <img src={SuccessGif} alt="order success img" />
+      <div className="successimg">
+        <img src={SuccessGif} alt="order success img" />
+      </div>
       <h2>Ordered Successfully</h2>
       <button className="btn" onClick={(e) => navigate("/")}>
         Home
