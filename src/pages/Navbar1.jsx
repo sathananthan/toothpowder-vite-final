@@ -105,7 +105,7 @@ export default function Navbar1() {
                   <Badge bg="danger">{basket?.length}</Badge>
                 </Nav.Link>
               ) : ( */}
-              <Nav.Link as={Link} to="/cart" className="cent">
+              <Nav.Link as={Link} to="/cart" className="basket-large-view">
                 <ShoppingCartIcon
                   style={{ fontSize: "35px", marginTop: "7px" }}
                 />
