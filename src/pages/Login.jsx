@@ -106,6 +106,9 @@ function Login() {
         <Link to="/reg" className="register">
           Create Account
         </Link>
+        <Link className="register" to="/">
+          Home
+        </Link>
       </div>
     </div>
   );

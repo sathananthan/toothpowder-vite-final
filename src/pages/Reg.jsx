@@ -18,7 +18,7 @@ function Reg() {
   // console.log("data : ", data);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (data.phno.length == 10) {
+    if (data.phno.length <= 10 && data.phno.length >= 8) {
       try {
         const response = await axios.post(`${API_URL}signup/verify`, data);
         console.log(response);
@@ -35,7 +35,7 @@ function Reg() {
         }
       }
     } else {
-      alert("Phno must be length 10");
+      alert("Phno must be length greater than 8  less than 10");
     }
   };
   return (
@@ -147,9 +147,13 @@ function Reg() {
           <br />
         </form>
         <br />
+        <Link className="register" to="/">
+          Home
+        </Link>
         <Link className="register" to="/login">
           Already has account
         </Link>
+        <br />
       </div>
     </div>
   );
