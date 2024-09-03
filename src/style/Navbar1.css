@@ -42,3 +42,9 @@
 .cent {
   text-align: center;
 }
+
+@media (min-width: 991.3px) {
+  .navbar-custom .cent.ms-auto {
+    display: none;
+  }
+}

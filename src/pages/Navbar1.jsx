@@ -41,6 +41,10 @@ export default function Navbar1() {
       >
         <Container>
           <Navbar.Brand href="/">Logo</Navbar.Brand>
+          <Nav.Link as={Link} to="/cart" className="cent ms-auto">
+            <ShoppingCartIcon style={{ fontSize: "35px", marginTop: "7px" }} />
+            <Badge bg="danger">{basket?.length}</Badge>
+          </Nav.Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

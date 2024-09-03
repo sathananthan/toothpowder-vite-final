@@ -47,6 +47,7 @@ function Productdetails() {
   const [username, setUsername] = useState("");
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
+  const [Overallrating, setOverallrating] = useState(5);
 
   var newComment = {
     idindex: myprod.id,
@@ -85,7 +86,31 @@ function Productdetails() {
     return 0; // Default value if no comments exist
   };
 
-  const overallRating = calculateOverallRating(product?.comments);
+  // var overallRating = calculateOverallRating(product?.comments);
+  const [allrating, setallrating] = useState(null);
+
+  /* const ratingChangedAllOver = (newRating) => {
+    console.log("New rating, ", newRating);
+    newRating = calculateOverallRating(product?.comments);
+    console.log("New rating, after ", newRating);
+    setallrating(newRating);
+  }; */
+
+  useEffect(() => {
+    const fetchDataAndSet = async () => {
+      try {
+        const result = await calculateOverallRating(product?.comments); // Wait for the function to return a value
+        console.log("Result : ", result);
+
+        setallrating(result); // Step 2: Store the value in state
+        console.log("all rating : ", allrating);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchDataAndSet(); // Call the function inside useEffect
+  }); // Empty dependency array means this runs once after the initial render
 
   console.log(myprod);
   console.log("Product : ", product);
@@ -144,18 +169,23 @@ function Productdetails() {
           )}
           <br />
           <h4>Overall Rating </h4>
-          <ReactStars
-            count={5}
-            value={overallRating}
-            size={28}
-            isHalf={true}
-            emptyIcon={<i className="far fa-star"></i>}
-            halfIcon={<i className="fa fa-star-half-alt"></i>}
-            fullIcon={<i className="fa fa-star"></i>}
-            activeColor="#ffd700"
-            edit={false}
-          />
-          {/* {overallRating} */}
+          {allrating != null && allrating ? (
+            <ReactStars
+              count={5}
+              value={allrating}
+              size={28}
+              isHalf={true}
+              emptyIcon={<i className="far fa-star"></i>}
+              halfIcon={<i className="fa fa-star-half-alt"></i>}
+              fullIcon={<i className="fa fa-star"></i>}
+              activeColor="#ffd700"
+              // Pass the calculated overall rating here
+              edit={false} // Disables editing
+            />
+          ) : (
+            ""
+          )}
+          {/* {allrating} */}
         </div>
       </div>
       {!product ? (
