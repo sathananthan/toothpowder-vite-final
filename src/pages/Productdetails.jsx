@@ -189,7 +189,11 @@ function Productdetails() {
         </div>
       </div>
       {!product ? (
-        <div></div>
+        <div className="comment-container">
+          <div className="comment-header">
+            <h3>Loading...</h3>
+          </div>
+        </div>
       ) : (
         <>
           <div className="comment-container">
@@ -228,9 +232,9 @@ function Productdetails() {
                     <h4>Amazing Product</h4>
                   </div> */}
                   <div className="container-cmt">
-                    <p className="paragraph-para">
+                    <div className="paragraph-para">
                       <p>{c.comment}</p>
-                    </p>
+                    </div>
                   </div>
                   <br />
                 </div>
