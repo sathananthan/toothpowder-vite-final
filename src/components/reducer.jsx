@@ -8,6 +8,7 @@ export const initialstate = {
     Address: "",
     phno: "",
     password: "",
+    basket: [],
   },
 };
 

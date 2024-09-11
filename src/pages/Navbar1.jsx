@@ -8,6 +8,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import Inventory2Icon from "@mui/icons-material/Inventory2";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+// import AssignmentIcon from "@mui/icons-material/Assignment";
 
 export default function Navbar1() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -88,6 +90,13 @@ export default function Navbar1() {
               ) : (
                 ""
               )}
+              <Nav.Link as={Link} to="/Orderdet" className="usericon">
+                {" "}
+                {/* /userdetails */}
+                <ShoppingBagIcon />
+                <br />
+                <span className="user">Order Details</span>
+              </Nav.Link>
               {/*  {basket?.length == 0 ? (
                 <Nav.Link
                   as={Link}

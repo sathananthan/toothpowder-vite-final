@@ -12,6 +12,7 @@ function Success() {
         <img src={SuccessGif} alt="order success img" />
       </div>
       <h2>Ordered Successfully</h2>
+      <p>Check order status on order details tab</p>
       <button className="btn" onClick={(e) => navigate("/")}>
         Home
       </button>

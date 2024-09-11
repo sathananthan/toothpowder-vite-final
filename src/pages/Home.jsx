@@ -56,6 +56,7 @@ function Home() {
             Address: response.data.Address,
             phno: response.data.phno,
             password: response.data.password,
+            basket: response.data.basket,
           },
         });
 

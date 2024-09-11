@@ -11,6 +11,7 @@ import Productdetails from "./pages/Productdetails";
 import Payment from "./pages/Payment";
 import User_details from "./pages/User_details";
 import Success from "./pages/Success";
+import OrderDetails from "./pages/OrderDetails";
 
 function App() {
   return (
@@ -19,12 +20,13 @@ function App() {
         <Route path="/" exact Component={Home} />
         <Route path="/productpg" exact Component={Productpg} />
         <Route path="/cart" exact Component={Cart} />
-        <Route path="login" exact Component={Login} />
+        <Route path="/login" exact Component={Login} />
         <Route path="/reg" exact Component={Reg} />
         <Route path="/productdetails/:id" exact Component={Productdetails} />
         <Route path="/userdetails" exact Component={User_details} />
         <Route path="/payment" exact Component={Payment} />
         <Route path="/Success" exact Component={Success} />
+        <Route path="/Orderdet" exact Component={OrderDetails} />
       </Routes>
     </Router>
   );
