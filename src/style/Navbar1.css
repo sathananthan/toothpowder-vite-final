@@ -1,6 +1,6 @@
 .navbar-custom {
   height: 110px;
-  background-color: #ee4a09;
+  background-color: #212529;
 }
 
 .navbar-custom .nav-link {
@@ -8,7 +8,7 @@
 }
 
 .navbar-custom .navbar-collapse {
-  background-color: #ee4a09; /* Same as Bootstrap's dark background */
+  background-color: #212529; /* Same as Bootstrap's dark background */
 }
 
 .brand-container {
@@ -27,7 +27,7 @@
 .brand-name {
   font-size: 2rem; /* Adjust font size for visibility */
   font-weight: bold;
-  color: #180784; /* Choose a color that fits your theme */
+  color: #f5efef; /* Choose a color that fits your theme */
   display: inline-block;
   vertical-align: middle;
   font-family: fangsong;
