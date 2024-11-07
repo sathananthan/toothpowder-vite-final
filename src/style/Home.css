@@ -48,8 +48,10 @@
   width: auto;
   margin-left: 50px;
   margin-right: 50px;
-  background-color: rgba(18, 22, 25, 0.8);
+  background-color: #ee4a0977;
   border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.704);
+
   text-align: center;
   padding-bottom: 50px;
 }
@@ -60,7 +62,7 @@
   font-size: 46px;
   height: 60px;
   font-weight: 50;
-  color: rgb(252, 250, 250);
+  color: rgb(255, 255, 255);
 }
 
 .headerContainer p {
@@ -68,7 +70,7 @@
   font-size: 32px;
   /* padding-top: 25px; */
   font-weight: lighter;
-  color: rgb(231, 222, 222);
+  color: rgb(255, 255, 255);
 }
 
 .headerContainer a {
@@ -82,6 +84,7 @@
   text-decoration: none;
   font-size: 20px;
   padding: 14px 25px;
+  border: 2px solid rgba(0, 0, 0, 0.704);
 }
 
 .headerContainer a:hover {
@@ -110,7 +113,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #121619;
+    background-color: #ee4a0977;
     color: white;
   }
 
