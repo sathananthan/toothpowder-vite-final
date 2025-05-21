@@ -26,7 +26,7 @@
 }
 
 .productItem .productItemAddbtn {
-  background-color: black;
+  background-color: #9f7a13;
   border: 1px solid;
   color: white;
   padding: 10px 20px;
@@ -48,7 +48,7 @@
 }
 
 .productItem .productItemAddbtn:hover {
-  background-color: rgba(39, 36, 36, 0.9);
+  background-color: #ffbf0e;
 }
 
 .productItem:hover {

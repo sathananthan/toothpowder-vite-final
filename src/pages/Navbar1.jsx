@@ -9,6 +9,7 @@ import Inventory2Icon from "@mui/icons-material/Inventory2";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import CompanyIcon from "../assets/logo3 croped yellow.png";
 // import AssignmentIcon from "@mui/icons-material/Assignment";
 
 export default function Navbar1() {
@@ -36,13 +37,21 @@ export default function Navbar1() {
   return (
     <>
       <Navbar
-        bg="dark"
-        data-bs-theme="dark"
+        /*  bg="dark"
+        data-bs-theme="dark" */
         expand="lg" /* for responsive */
         className="navbar-custom"
       >
         <Container>
-          <Navbar.Brand href="/">Logo</Navbar.Brand>
+          <Navbar.Brand>
+            <div className="brand-container">
+              <img
+                src={CompanyIcon} // Replace with your logo path
+                className="logo-custom"
+              />
+              <span className="brand-name">AAT</span>
+            </div>
+          </Navbar.Brand>
           <Nav.Link as={Link} to="/cart" className="cent ms-auto">
             <ShoppingCartIcon style={{ fontSize: "35px", marginTop: "7px" }} />
             <Badge bg="danger">{basket?.length}</Badge>

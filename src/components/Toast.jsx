@@ -16,7 +16,7 @@ function Toast1({ show, setShow }) {
           <div className={`toast-container1 ${show ? "show" : ""}`}>
             <Toast
               onClose={() => setShow(false)}
-              bg="dark"
+              bg="warning"
               show={show}
               delay={3000}
               autohide

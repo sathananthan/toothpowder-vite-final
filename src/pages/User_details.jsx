@@ -131,7 +131,7 @@ function User_details() {
           <br />
           <button
             style={{
-              backgroundColor: "rgb(221, 32, 32)",
+              backgroundColor: "#ffbf0e",
               border: "1px solid",
               color: "rgb(255, 255, 255)",
               borderRadius: "5px",
@@ -179,7 +179,7 @@ function User_details() {
           <br />
           <button
             style={{
-              backgroundColor: "rgb(221, 32, 32)",
+              backgroundColor: "#ffbf0e",
               border: "1px solid",
               color: "rgb(255, 255, 255)",
               borderRadius: "5px",
@@ -191,7 +191,9 @@ function User_details() {
             Edit Address
           </button>
 
-          {isPopupOpenAddress && <PopupChgAddress closePopup={togglePopupAddress} />}
+          {isPopupOpenAddress && (
+            <PopupChgAddress closePopup={togglePopupAddress} />
+          )}
           {/*   <br /> */}
 
           {/* {!edit ? (

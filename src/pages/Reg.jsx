@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../style/Reg.css";
 import API_URL from "../../global/config";
+import CompanyIcon from "../assets/logo3 croped white.png";
 
 function Reg() {
   const [data, setData] = useState({
@@ -43,7 +44,11 @@ function Reg() {
       <div className="logo">
         <br />
         <Link to="/">
-          <p>Logo</p>
+          <img
+            src={CompanyIcon} // Replace with your logo path
+            className="logo-custom"
+          />
+          <p style={{ textAlign: "center", fontSize: "24px" }}>AAT</p>
         </Link>
       </div>
       <div className="reg_container">
