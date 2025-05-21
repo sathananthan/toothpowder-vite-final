@@ -16,14 +16,14 @@
 
 /* Toast styling */
 .toast-container1 .toast {
-  background-color: #333;
+  background-color: #fdd300;
   color: #fff;
   width: auto; /* Adjust the width as needed */
 }
 
 /* Optional additional styling */
 .toast-container1 .toast-header {
-  background-color: #444;
+  background-color: #938124;
   color: #fff;
 }
 

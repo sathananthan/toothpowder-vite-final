@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   height: 350px;
-  background-color: #ee4a09;
+  background-color: #8e6f01;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,7 @@
 .footer .top {
   width: 100%;
   height: 300px;
-  background-color: #eb6847;
+  background-color: #ffbf0e;
 }
 
 .footer .top .left {

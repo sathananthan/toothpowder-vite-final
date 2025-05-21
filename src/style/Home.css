@@ -48,7 +48,7 @@
   width: auto;
   margin-left: 50px;
   margin-right: 50px;
-  background-color: #ee4a0977;
+  background-color: #ffe04293;
   border-radius: 20px;
   border: 3px solid rgba(0, 0, 0, 0.704);
 
@@ -113,7 +113,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #ee4a0977;
+    background-color: #ffe04293;
     color: white;
   }
 

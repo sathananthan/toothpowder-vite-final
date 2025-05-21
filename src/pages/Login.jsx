@@ -10,6 +10,7 @@ import {
 import "../style/Login.css";
 import API_URL from "../../global/config";
 import PopupForgetPass from "./PopupForgetPass";
+import CompanyIcon from "../assets/logo3 croped white.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -66,7 +67,11 @@ function Login() {
       <div className="logo">
         <br />
         <Link to="/">
-          <p>Logo</p>
+          <img
+            src={CompanyIcon} // Replace with your logo path
+            className="logo-custom"
+          />
+          <p style={{ textAlign: "center", fontSize: "24px" }}>AAT</p>
         </Link>
       </div>
       <div className="login_container">

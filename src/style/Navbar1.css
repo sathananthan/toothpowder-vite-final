@@ -1,14 +1,15 @@
 .navbar-custom {
   height: 110px;
-  background-color: #ee4a09;
+  background-color: #ffbf0e;
 }
 
 .navbar-custom .nav-link {
   font-weight: bold;
+  color: white;
 }
 
 .navbar-custom .navbar-collapse {
-  background-color: #ee4a09; /* Same as Bootstrap's dark background */
+  background-color: #ffbf0e; /* Same as Bootstrap's dark background */
 }
 
 .brand-container {
@@ -57,6 +58,7 @@
 .sign {
   font-size: 15px;
   margin-left: 2px;
+  /* color: red; */
 }
 
 .name {
