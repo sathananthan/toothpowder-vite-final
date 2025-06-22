@@ -1,187 +1,118 @@
 #home1 {
+  position: relative;
   width: 100%;
   height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   flex-direction: column;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  transition: 5s;
-
-  animation-name: animate;
-  animation-direction: alternate-reverse;
-  animation-duration: 30s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-  animation-timing-function: ease-in-out;
-
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 8),
-    rgba(0, 0, 0, 7),
-    rgba(0, 0, 0, 6),
-    rgba(0, 0, 0, 5),
-    rgba(0, 0, 0, 0)
-  );
-  z-index: -1;
+  overflow: hidden;
+  z-index: 1;
 }
 
-@keyframes animate {
-  0% {
-    background-image: url("../assets/family1.jpg");
+#home1::before,
+#home1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: opacity 2s ease;
+  z-index: -2;
+}
+
+#home1::before {
+  background-image: url("../assets/family1.jpg");
+  animation-name: fadeInOut1;
+}
+
+#home1::after {
+  background-image: url("../assets/family2.jpg");
+  animation-name: fadeInOut2;
+}
+
+@keyframes fadeInOut1 {
+  0%,
+  45% {
+    opacity: 1;
   }
-  50% {
-    background-image: url("../assets/family2.jpg");
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut2 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  50%,
+  95% {
+    opacity: 1;
   }
   100% {
-    background-image: url("../assets/family1.jpg");
+    opacity: 0;
   }
 }
 
 .headerContainer {
-  width: auto;
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: #ffe04293;
-  border-radius: 20px;
-  border: 3px solid rgba(0, 0, 0, 0.704);
-
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5); /* transparent dark card */
+  padding: 30px 40px;
+  border-radius: 16px;
   text-align: center;
-  padding-bottom: 50px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .headerContainer h1 {
-  justify-content: center;
-  align-items: center;
-  font-size: 46px;
-  height: 60px;
-  font-weight: 50;
-  color: rgb(255, 255, 255);
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffe04c;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 .headerContainer p {
-  padding: 0;
-  font-size: 32px;
-  /* padding-top: 25px; */
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 30px;
 }
 
 .headerContainer a {
-  color: black;
-  border: none;
+  font-size: 18px;
+  padding: 12px 24px;
+  background-color: #ffe04c;
+  color: #000;
   border-radius: 10px;
-  cursor: pointer;
-  justify-content: center;
-  background-color: white;
-  color: rgb(0, 0, 0);
+  border: none;
   text-decoration: none;
-  font-size: 20px;
-  padding: 14px 25px;
-  border: 2px solid rgba(0, 0, 0, 0.704);
+  transition: 0.3s ease;
 }
 
 .headerContainer a:hover {
-  background-color: #b7c4ca;
-  cursor: pointer;
-  transition: 0.3 ease-in;
+  background-color: #fff176;
+  transform: translateY(-2px);
 }
 
-@media only screen and (max-width: 980px) {
-  .headerContainer p {
-    padding-top: 25px;
-  }
-}
 @media only screen and (max-width: 650px) {
-  #home1 {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .headerContainer {
-    margin: 50px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #ffe04293;
-    color: white;
-  }
-
   .headerContainer h1 {
-    font-size: 30px;
-    height: 30px;
-    color: white;
+    font-size: 28px;
   }
-
   .headerContainer p {
     font-size: 18px;
-    padding-top: 25px;
-    color: white;
-  }
-
-  .headerContainer a {
-    background-color: white;
-    color: #121619;
-    margin-bottom: 30px;
-  }
-
-  .headerContainer a:hover {
-    background-color: rgb(236, 226, 226);
-    color: #121619;
-  }
-}
-
-@media only screen and (max-width: 940px) and (min-width: 735px) {
-  .headerContainer h1 {
-    font-size: 46px;
-  }
-
-  .headerContainer p {
-    font-size: 32px;
-    padding-top: 25px;
-  }
-}
-
-@media only screen and (max-width: 735px) and (min-width: 650px) {
-  .headerContainer h1 {
-    font-size: 36px;
-  }
-
-  .headerContainer p {
-    padding-top: 25px;
-    font-size: 21px;
-  }
-}
-
-@media only screen and (max-width: 555px) and (min-width: 430px) {
-  .headerContainer h1 {
-    font-size: 30px;
-  }
-
-  .headerContainer p {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (max-width: 555px) {
-  .headerContainer h1 {
-    font-size: 22px;
-  }
-  .headerContainer p {
-    font-size: 15px;
-  }
-  .headerContainer a {
-    font-size: 15px;
-    padding: 5px 15px;
   }
 }
