@@ -21,7 +21,13 @@ function CartProduct({ id, image, name, price, qty }) {
     <div className="CartProduct">
       <div className="img">
         <Link to={"/productdetails/" + id}>
-          <img src={image} alt="prod_img" className="prod_img"></img>
+          <img
+            src={image}
+            alt="prod_img"
+            height={"400px"}
+            width={"300px"}
+            className="prod_img"
+          ></img>
         </Link>
         {/* &nbsp;&nbsp;<button onClick={addToCart}>+</button> &nbsp;{count}&nbsp;{" "} */}
         {/* <button>-</button> */}
