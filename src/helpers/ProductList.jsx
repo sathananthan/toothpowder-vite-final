@@ -1,10 +1,10 @@
 /* eslint-disable */
-import MintNeem from "../assets/85.png";
-import ToothPowderForPersonal from "../assets/50.png";
-import ActivatedCharcoalForTeeth from "../assets/60.png";
-import GelCoolMintAmwoodoSaltToothpowder from "../assets/80.png";
-import AyurvedicToothPowder from "../assets/120.png";
-import VanasLoungPiper100gmHerbalDantamajanPowder from "../assets/93.png";
+import MintNeem from "../assets/toothpowder 1st model.png";
+import ToothPowderForPersonal from "../assets/Packed toothpowder.png";
+import ActivatedCharcoalForTeeth from "../assets/Packed toothpowder transperency.png";
+import GelCoolMintAmwoodoSaltToothpowder from "../assets/Packed toothpowder transperency.png";
+import AyurvedicToothPowder from "../assets/Packed toothpowder.png";
+import VanasLoungPiper100gmHerbalDantamajanPowder from "../assets/toothpowder 2nd model.png";
 
 export const ProductList = [
   {

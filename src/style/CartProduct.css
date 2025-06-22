@@ -15,7 +15,7 @@
 }
 
 .CartProduct .info button {
-  background-color: black;
+  background-color: #9f7a13;
   border: 1px solid;
   color: white;
   border-radius: 5px;
@@ -25,7 +25,7 @@
 }
 
 .CartProduct .info button:hover {
-  background-color: rgba(39, 36, 36, 0.9);
+  background-color: #ffbf0e;
 }
 
 .CartProduct .img {
